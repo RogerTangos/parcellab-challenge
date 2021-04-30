@@ -24,19 +24,19 @@ Requirements will ideally be installed on a virtual environment, but this can al
 python3 -m pip install -r requirements.txt
 ```
 
-## Create a Superuser
-A user must be created to access the api:
-
-```
-python3 manage.py createsuperuser
-```
-
 ## Create and Migrate the database
 This only needs to be run once, but will not cause any issues if run multiple times.
 
 ```
 python3 manage.py makemigrations challenge
 python3 manage.py migrate
+```
+
+## Create a Superuser
+A user must be created to access the api:
+
+```
+python3 manage.py createsuperuser
 ```
 
 # Run
