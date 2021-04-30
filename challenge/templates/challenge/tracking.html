@@ -1,0 +1,25 @@
+<h1>You are Tracking the Following Orders:</h1>
+{% if tracking_number_list %}
+    <ul>
+    {% for tracking in tracking_number_list %}
+    	<li><h4>See Checkpoints for <a href="{% url 'challenge:detail' tracking.tracking_number %}">{{ tracking.orderNo }}</a></h4>
+            <ul>
+                <li>tracking_number: {{ tracking.street }}</li>
+                <li>street: {{ tracking.street }}</li>
+                <li>zip_code: {{ tracking.zip_code }}</li>
+                <li>city: {{ tracking.city }}</li>
+                <li>destination_country_iso3: {{ tracking.destinati_country_iso3on }}</li>
+                <li>email: {{ tracking.email }}</li>
+                <li>articleNo: {{ tracking.articleNo }}</li>
+                <!-- There should be an image url included in the future
+                    <li>ArticleImageUrl: {{ tracking.courier ArticleImageUrl}</li> -->
+                <li>quantity: {{ tracking.quantity }}</li>
+                <li>product_name: {{ tracking.product_name}}</li>
+            </ul>
+        </li>
+
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No orders are available.</p>
+{% endif %}

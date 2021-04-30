@@ -1,0 +1,21 @@
+<!-- {% debug %} -->
+
+<h1><a href="{% url 'challenge:index' %} "> Go Back to Orders </a></h1>
+<h1>Checkpoints</h1>
+{% if checkpoint_list %}
+    {% for checkpoint in checkpoint_list %}
+    <ul>
+        <h3>{{ checkpoint.status_text }}</h3>
+        <ul>
+            <li>tracking_number: {{ checkpoint.tracking_number }}</li>
+            <li>location: {{ checkpoint.location }}</li>
+            <li>timestamp: {{ checkpoint.timestamp }}</li>
+            <li>status: {{ checkpoint.status }}</li>
+            <li>status_text: {{ checkpoint.status_text }}</li>
+            <li>status_details: {{ checkpoint.status_details }}</li>
+        </ul>
+    </ul>
+    {% endfor %}
+{% else %}
+    <p>No checkpoints are available.</p>
+{% endif %}

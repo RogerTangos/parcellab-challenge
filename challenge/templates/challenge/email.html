@@ -1,0 +1,6 @@
+<h2>Track Your Orders</h2>
+<form action="orders/" method="get">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+</form>
