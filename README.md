@@ -1,6 +1,6 @@
 # ParcelLab Test App
 
-This is a test app for parcellab's challenge. It is written in Django to take advantage of the framework's many integrations and migrations, and uses a SQLite database. Because of Djanso's broad ORM support, the database easily be changed via `settings.py`.
+This is a test app for parcellab's challenge. It is written in Django to take advantage of the framework's many integrations and migrations, and uses a SQLite database. Because of Djanso's broad ORM support, the database can easily be changed via `settings.py`.
 
 # Setup
 
